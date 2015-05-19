@@ -20,7 +20,7 @@
     "url": "https://github.com/emnewxt/polym-eric.git"
   },
   "license": "MIT",
-  "homepage": "https://github.com/PolymerElements/paper-drawer-panel",
+  "homepage": "",
   "dependencies": {
     "iron-selector": "PolymerElements/iron-selector#^0.9.0",
     "iron-media-query": "PolymerElements/iron-media-query#^0.9.0",
@@ -28,7 +28,16 @@
     "iron-component-page": "PolymerElements/iron-component-page#^0.9.0",
         "paper-styles": "PolymerElements/paper-styles#^0.9.0",
     "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0",
-    "paper-drawer-panel": "PolymerElements/paper-drawer-panel#^0.9.0"
+    "paper-drawer-panel": "PolymerElements/paper-drawer-panel#^0.9.0",
+    "paper-item": "PolymerElements/paper-item#^0.9.0",
+    "paper-menu": "PolymerElements/paper-menu#^0.9.0",
+    "iron-icon":"PolymerElements/iron-icon#^0.9.0",
+        "iron-icons":"PolymerElements/iron-icons#^0.9.0",
+    "iron-meta":"PolymerElements/iron-meta#^0.9.0",
+       "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0",
+       "paper-header-panel":"PolymerElements/paper-header-panel#^0.9.0",
+    "paper-toolbar":"PolymerElements/paper-toolbar#^0.9.0",
+        "paper-toolbar":"PolymerElements/iron-pages#^0.9.0"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^0.9.0",
@@ -36,3 +45,4 @@
     "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
   }
 }
+

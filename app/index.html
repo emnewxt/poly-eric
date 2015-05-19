@@ -20,31 +20,55 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <link rel="import" href="../../paper-styles/default-theme.html">
 
     <link rel="import" href="../../paper-drawer-panel/paper-drawer-panel.html">
+    <link rel="import" href="../../paper-item/paper-item.html">
+    <link rel="import" href="../../paper-menu/paper-menu.html">
+    <link rel="import" href="../../paper-item/paper-item.html">
+    <link rel="import" href="../../iron-icon/iron-icon.html">
+    <link rel="import" href="../../iron-meta/iron-meta.html">
+    <link rel="import" href="../../iron-icons/iron-icons.html"> 
+    <link rel="import" href="../../paper-header-panel/paper-header-panel.html">
+    <link rel="import" href="../../paper-toolbar/paper-toolbar.html">
+    <link rel="import" href="../../iron-pages/iron-pages.html"> 
+    
+  
 
     <style>
       /* TODO: these colors should come from paper-styles/default-theme.html
       once Polymer/polymer#1415 is fixed. */
+      
+      
+      /*
+      rgb(79,125,201);
+      #526E9C;
+      #eee;
+      #CFC8DC;
+      rgba(242,242,242,1)
+      */
       paper-drawer-panel #drawer {
-        background-color: #3f51b5;
-        border-right: 1px solid #ccc;
+        
+        background-color: #ee;
+   /*     background-color: #3f51b5; */
+        border-right: none;
+        drawerWidth.value= '130px';
+
       }
 
       paper-drawer-panel::shadow #drawer {
-        background-color: #3f51b5;
-        border-right: 1px solid #ccc;
+        background-color: #ee;
+        border-right: none;
       }
 
       paper-drawer-panel[right-drawer] #drawer {
-        border-left: 1px solid #ccc;
+        border-left: 1px solid #eee;
         border-right: none;
       }
       paper-drawer-panel[right-drawer]::shadow #drawer {
-        border-left: 1px solid #ccc;
+        border-left: 1px solid #eee;
         border-right: none;
       }
 
-      paper-drawer-panel #main  { background-color: #c5cae9 }
-      paper-drawer-panel::shadow #main { background-color: #c5cae9; }
+      paper-drawer-panel #main  { background-color:  rgba(242,242,242,1); }
+      paper-drawer-panel::shadow #main { background-color:  rgba(242,242,242,1); }
 
       button {
         width: 160px;
@@ -52,37 +76,57 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         font-size: 16px;
         margin: 8px;
       }
-
+      
+      paper-menu #paper_menu {
+        font-size: 16px;
+      }
     </style>
-
   </head>
-
   <body>
-
     <paper-drawer-panel id="paperDrawerPanel">
       <div drawer>
         
-        
-      </div>
-      <div main>
-        <div>
-          <button onclick="flipDrawer()">flip drawer</button>
-        </div>
-        <div>
-          <button paper-drawer-toggle>toggle drawer</button>
-        </div>
-      </div>
-    </paper-drawer-panel>
+              <paper-header-panel>
+                <paper-toolbar style="background-color: rgb(79, 125, 201);">
+
+        </paper-toolbar>
+       <paper-menu id="paper_menu" theme="core-light-theme">
+         <paper-item>
+           <iron-icon icon="settings" style="margin-right: 8px;"></iron-icon><div>Item 0</div> 
+         </paper-item>
+         <paper-item>
+           <iron-icon icon="settings" style="margin-right: 8px;"> </iron-icon><div>Item 1</div>
+         </paper-item>
+         <paper-item>
+           <iron-icon icon="settings" style="margin-right: 8px;"> </iron-icon><div>Item 2</div>
+         </paper-item>
+       </paper-menu>
+             </paper-header-panel>
+     </div>
+     <div main>
+      <paper-header-panel>
+        <paper-toolbar  style="background-color: #526E9C;">
+          <iron-icon icon="menu" style="margin-right: 8px;"></iron-icon><div>Title</div>
+        </paper-toolbar>
+        <iron-pages selected="0">
+          <div >Page One</div>
+          <div>Page Two</div>
+          <div>Page Three</div>
+        </iron-pages>
+      </paper-header-panel>
+    </div>
+  </paper-drawer-panel>
 
     <script>
       (function(global) {
 
         'use strict';
 
-        var DRAWER_ATTR = 'right-drawer';
+  //      var DRAWER_ATTR = 'right-drawer';
 
         var pdp = document.getElementById('paperDrawerPanel');
-
+        pdp.drawerWidth = "130px";
+      /*  
         global.flipDrawer = function() {
           if (pdp.hasAttribute(DRAWER_ATTR)) {
             pdp.removeAttribute(DRAWER_ATTR);
@@ -90,9 +134,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             pdp.setAttribute(DRAWER_ATTR, '');
           }
         }
+        */
 
       }(this));
     </script>
-
   </body>
 </html>
