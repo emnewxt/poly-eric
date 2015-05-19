@@ -1,1 +1,1 @@
-# poly-eric
+# polym-eric
